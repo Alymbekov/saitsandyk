@@ -1,0 +1,302 @@
+header {
+z-index: 999;
+	position: fixed;
+       width: 100%;
+         height: 70px;
+           background-color: black;
+
+
+}
+.flexx{
+  display: flex;
+}
+.bg {
+  z-index: 1;
+    width: 100%;
+       height: 700px; 
+          background-image: url(img/bg.png);
+
+
+}
+.nb {
+z-index: 1;
+   display: flex;
+      position: fixed;
+       font-size: 18px;
+        color: #fdfcfc;
+         margin-top: 20px;
+            font-family: 'Roboto', sans-serif;
+              cursor: pointer;
+
+}
+.search123 {
+flex: 1; 
+z-index: 1; 
+ margin-left: 150px;
+  margin-top: 100px; 
+     position: static;
+	     font-weight: bold;
+            font-family: 'Ubuntu', sans-serif;
+               font-size: 30px;
+                  color: #d60e01;
+                    }
+.search1 {
+ flex: 1;
+ z-index: 1;
+   position: absolute;
+    margin-top: 100px;
+     margin-left: 30px; 
+       border-radius: 30px;
+        padding-left: 10px;
+               width: 580px;
+                  height: 35px;
+                       background-color: rgba(0,0,0,0.3);
+                          color: black;
+                            border: none;
+
+}
+.search1:hover{
+}
+.imgphone {
+flex: 1; 
+z-index: 1; 
+  position: static;
+      margin: 0px;
+         margin-left: 640px;
+           margin-top: 10px;
+}
+.numberphone {
+  flex: 1;
+  z-index: 1; 
+   position: static;
+      margin-left: 0;
+        margin-top: 80px; 
+           font-size: 22px; 
+            font-family: 'Ubuntu', sans-serif;
+
+
+}
+.slideshow-container{
+  max-width: 1000px;
+   position: relative;
+    z-index: 1; 
+}
+.prev, .next{
+  z-index: 1; 
+  cursor: pointer;
+   position: absolute;
+    top: 35%;
+     width: auto;
+      margin-top: -22px;
+       padding: 16px;
+        background: linear-gradient(to top, #df7c00 0%, #d60e01 36%, #d60e01 100%);
+        color:white;
+         width: 70px;
+          height: 70px;
+           border-radius: 50%;
+            font-weight: bold;
+             font-size: 18px;
+              transition: 0.6s ease;
+             
+}
+
+.next{
+z-index: 1; 
+  right: 30px;
+   border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover{
+
+}
+.mySlides{
+  text-align: center;
+   max-height: 700px;
+    z-index: 1; 
+}
+.text{
+  color: #f2f2f2;
+    font-size: 22px;
+      padding: 8px 12px;
+        position: relative;
+          bottom: 90px;
+           z-index: 1; 
+}
+.dot{ 
+  cursor: pointer;
+  height: 13px;
+  width: 13px;
+        margin: 0 2px;
+           background-color: #bbb;
+             border-radius: 50%;
+               display: inline-block;
+                   transition: background-color:0.6s ease;
+                    z-index: 1; 
+
+}
+.active, .dot:hover{
+  background-color: #717171;
+   z-index: 1; 
+
+}
+.fade{
+  -webkit-animation-name: fade;
+    -webkit-animation-duration:1s;
+       animation-name:fade;
+         animation-duration:1s;
+}
+
+/*@-webkit-keyframes fade{
+  0%{opacity:0.4;}
+  100%{opacity:1;}
+}*/
+@keyframes fade{
+  0%{opacity:0.4;}
+    100%{opacity:1;}
+}
+.secondmenu {
+  margin-left: 142px;
+  width: 1116px;
+  height: 62px;
+   border-radius: 10px;
+    background: linear-gradient(to top, #df7c00 0%, #d60e01 66%, #d60e01 100%);
+
+}
+.navtext {
+
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  margin-left: 90px;
+  padding-top: 16px;
+  color: #ffffff;
+}
+.section_2{
+  margin-bottom:10%;
+  width: 100%;
+  height: 900px;
+  background-image: url(img/bg.png);
+}
+#nav{
+  position: absolute;
+ margin-left: 142px;
+  width: 1080px;
+  height: 62px;
+   border-radius: 10px;
+    background: linear-gradient(to top, #df7c00 0%, #d60e01 66%, #d60e01 100%);
+}
+#nav li{
+  z-index: 990;
+    float:left;
+    margin-right:10px;
+    position:relative;
+    display:block;
+}
+#nav li a{
+  z-index: 990;
+    display:block;
+    padding:5px;
+    color:#fff;
+    text-decoration:none;
+    font-size: 18px;
+     font-family: 'Ubuntu', sans-serif;
+}
+#nav li a:hover{
+    color:#fff;
+    background: linear-gradient(to top, #df7c00 0%, #d60e01 66%, #d60e01 100%);
+    background:rgba(107,12,54,0.75); /* Выглядит полупрозрачным */
+}
+
+/*--- ВЫПАДАЮЩИЕ ПУНКТЫ ---*/
+#nav ul{
+    list-style:none;
+    position:absolute;
+    left:-9999px; /* Скрываем за экраном, когда не нужно (данный метод лучше, чем display:none;) */
+    opacity:0; /* Устанавливаем начальное состояние прозрачности */
+    -webkit-transition:0.25s linear opacity; /* В Webkit выпадающие пункты будут проявляться */
+}
+#nav ul li{
+    padding-top:1px; /* Вводим отступ между li чтобы создать иллюзию разделенных пунктов меню */
+    float:none;
+}
+#nav ul a{
+    white-space:nowrap; /* Останавливаем перенос текста и создаем многострочный выпадающий пункт */
+    display:block;
+}
+#nav li:hover ul{ /* Выводим выпадающий пункт при наведении курсора */
+    left:0; /* Приносим его обратно на экран, когда нужно */
+    opacity:1; /* Делаем непрозрачным */
+}
+#nav li:hover a{ /* Устанавливаем стили для верхнего уровня, когда выводится выпадающий список */
+    background: linear-gradient(to top, #df7c00 0%, #d60e01 88%, #d60e01 100%);
+  background: linear-gradient(to top, #df7c00 0%, #d60e01 88%, #d60e01 100%); /* Выглядит полупрозрачным */
+    text-decoration:underline;
+}
+#nav li:hover ul a{ /* Изменяем некоторые стили верхнего уровня при выводе выпадающего пункта */
+    text-decoration:none;
+    -webkit-transition:-webkit-transform 0.075s linear;
+}
+#nav li:hover ul li a:hover{ /* Устанавливаем стили для выпадающих пунктов, когда курсор наводится на конкретный пункт */
+    background:#333;
+    background:rgba(51,51,51,0.); /* Будет полупрозрачным */
+    text-decoration:underline;
+    -moz-transform:scale(1.05);
+    -webkit-transform:scale(1.05);
+}
+.newsandyk{
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Ubuntu', sans-serif;
+  color: #d60e01;
+  position: relative; 
+  bottom: 920px;
+  
+}
+.just {
+
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Ubuntu', sans-serif;
+  color: #d60e01;
+  position: relative;
+  bottom: 1050px;
+}
+.prev1, .next1{
+  z-index: 1; 
+  cursor: pointer;
+   position: absolute;
+    top: 35%;
+     width: auto;
+      margin-top: -22px;
+       padding: 16px;
+        background: linear-gradient(to top, #df7c00 0%, #d60e01 36%, #d60e01 100%);
+        color:white;
+         width: 70px;
+          height: 70px;
+           border-radius: 50%;
+            font-weight: bold;
+             font-size: 18px;
+              transition: 0.6s ease;
+             
+}
+.bgslaid {
+  z-index: 988;
+  position: relative;
+  bottom: 305px;
+  width: 300px;
+  height: 50px;
+  background-color: rgba(0,0,0,0.5);
+}
+.bgslaid1 {
+  z-index: 988;
+  position: relative;
+  bottom: 305px;
+  width: 300px;
+  height: 50px;
+  background-color: rgba(0,0,0,0.5);
+}
+.section_3 {
+width: 100%;
+height: 700px;
+position: relative;
+bottom: 1230px;
+background-image: url(img/bg.png);
+}
